@@ -3,12 +3,12 @@
 <table>
   <tr>
     <td align="center">
-    SIGN UP
+    SIGN IN
     </td>
   </tr>
   <tr>
     <td align="right">
-      <form action=<%= users_url %> method="post">
+      <form action=<%= session_url %> method="post">
       <label for="text">Email:</label>
       <input type="text" id='text' name="user[email]">
     </td>
@@ -21,7 +21,7 @@
   </tr>
     <tr>
       <td align="center">
-        <input type="submit" value="Create user!">
+        <input type="submit" value="Login!">
       </td>
     </tr>
 
