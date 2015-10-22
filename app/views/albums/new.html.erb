@@ -1,0 +1,11 @@
+<h1>Create an album</h1>
+<form action=<%= albums_url %> method="post">
+  <label for="album">Enter album name<label>
+  <input type="text" name=album[name] id="album">
+  <select name="album[band_id]">
+    <%@bands.each do |band|%>
+      <option value=<%=band.id%> <%="selected" if band.id == @band_id.to_i %>> <%=band.name%></option>
+    <%end%>
+</select>
+<input type="submit" value="Create album!">
+</form>
