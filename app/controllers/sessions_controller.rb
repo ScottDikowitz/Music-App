@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     user = User.find_by_credentials(params[:user][:email], params[:user][:password])
     if user
       log_in_user!(user)
-      redirect_to user_url(user.id)
+      redirect_to bands_url
     else
       render text: "Login unsuccessful!"
     end
