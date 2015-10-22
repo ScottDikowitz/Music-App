@@ -5,4 +5,15 @@ class BandsController < ApplicationController
   def show
     @band = Band.find(params[:id])
   end
+  def new
+
+  end
+  def create
+    Band.create!(band_params)
+    @bands = Band.all
+    render :index
+  end
+  def band_params
+    self.params.require(:band).permit(:name)
+  end
 end
